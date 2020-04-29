@@ -1,0 +1,36 @@
+@startuml mainUCD
+
+title
+<font size=16 color=black>Система керування проектами сталої якості
+<font size=14 color=black>Основні процеси
+end title
+
+actor "Робітник" as Worker
+actor "Менеджер" as Manager
+actor "Тестувальник" as QA
+
+usecase "Редагування плану проекту" as editProjectUC
+usecase "Запуск проекту" as runProjectUC
+usecase "Отримання задачі" as getTaskUC
+usecase "Передача результату" as resolveTaskUC
+usecase "Перевірка виконання" as handleResultUC
+usecase "Обробка помилок" as handleErrorsUC
+
+runProjectUC -u-|> getTaskUC
+resolveTaskUC -d-|> handleResultUC
+handleErrorsUC -l-|> editProjectUC
+
+Manager -d-> editProjectUC
+Manager -u-> runProjectUC
+
+Worker -l-> getTaskUC
+Worker -r-> resolveTaskUC
+
+QA -u-> handleResultUC
+QA -d-> handleErrorsUC
+
+right footer
+НТУУ КПІ ім.І.Сікорського
+Киів, 2020 
+end footer
+@enduml
