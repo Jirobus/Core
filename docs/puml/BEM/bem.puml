@@ -1,0 +1,39 @@
+@startuml BEM
+title
+<font size=16 color=black>BE-модель
+end title
+
+entity Person
+entity Person.id
+entity Person.username
+entity Person.qualities
+
+entity Role
+entity Role.id
+entity Role.name
+
+entity Task
+entity Task.id
+entity Task.details
+entity Task.isResolved
+
+Task.id -u-* Task
+Task.details -u-* Task
+Task.isResolved -u-* Task
+
+Person.id -l* Person
+Person.username -l* Person
+Person.qualities -r* Person
+
+Role.id -r* Role
+Role.name --* Role
+
+Person "0,*"-l-"1,1" Role
+Task "0,*"-r-"1,1" Role
+Task "0,*"-d-"1,1" Person
+
+right footer
+НТУУ КПІ ім.І.Сікорського
+Киів, 2020
+end footer
+@enduml

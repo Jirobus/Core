@@ -1,0 +1,31 @@
+@startuml BEM
+title
+<font size=16 color=black>ER-модель
+end title
+
+entity Person {
+    id
+    username
+    qualities
+}
+
+entity Role {
+    id
+    name
+}
+
+entity Task {
+    id
+    details
+    isResolved
+}
+
+Person "0,*"-l-"1,1" Role
+Task "0,*"-r-"1,1" Role
+Task "0,*"-d-"1,1" Person
+
+right footer
+НТУУ КПІ ім.І.Сікорського
+Киів, 2020
+end footer
+@enduml
