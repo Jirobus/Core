@@ -1,28 +1,49 @@
 @startuml BEM
 title
-<font size=16 color=black>ER-модель
+<font size=16 color=black>BE-модель
 end title
 
 entity Person {
     id
     username
+    publickey
     qualities
 }
 
-entity Role {
+entity Group {
     id
     name
+}
+
+entity Privilege {
+    id
+    type
 }
 
 entity Task {
     id
     details
-    isResolved
 }
 
-Person "0,*"-l-"1,1" Role
-Task "0,*"-r-"1,1" Role
+entity Signature {
+    id
+    rawdata
+}
+
+entity Artefact {
+    id
+    uniqueName
+    details
+}
+
+Signature "0,*"--"1,1" Person
+Group "0,*"--"0,*" Person
+Group "0,*"--"0,*" Privilege
+Privilege "0,*"--"1,1" Task
+Task "1,1"--"0,*" Signature
 Task "0,*"-d-"1,1" Person
+Task "0,*"-d-"0,*" Artefact
+
 
 right footer
 НТУУ КПІ ім.І.Сікорського
