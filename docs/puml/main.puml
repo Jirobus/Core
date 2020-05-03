@@ -16,10 +16,6 @@ usecase "Передача результату" as resolveTaskUC
 usecase "Перевірка виконання" as handleResultUC
 usecase "Обробка помилок" as handleErrorsUC
 
-runProjectUC -u-|> getTaskUC
-resolveTaskUC -d-|> handleResultUC
-handleErrorsUC -l-|> editProjectUC
-
 Manager -d-> editProjectUC
 Manager -u-> runProjectUC
 
