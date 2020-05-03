@@ -6,31 +6,59 @@ end title
 entity Person
 entity Person.id
 entity Person.username
+entity Person.publickey
 entity Person.qualities
 
-entity Role
-entity Role.id
-entity Role.name
+Person.id --* Person
+Person.username --* Person
+Person.publickey --* Person
+Person.qualities --* Person
+
+entity Group
+entity Group.id
+entity Group.name
+
+Group.id --* Group
+Group.name --* Group
+
+entity Privilege
+entity Privilege.id
+entity Privilege.type
+
+Privilege.id --* Privilege
+Privilege.type --* Privilege
 
 entity Task
 entity Task.id
 entity Task.details
-entity Task.isResolved
 
-Task.id -u-* Task
-Task.details -u-* Task
-Task.isResolved -u-* Task
+Task.id --* Task
+Task.details --* Task
 
-Person.id -l* Person
-Person.username -l* Person
-Person.qualities -r* Person
+entity Signature
+entity Signature.id
+entity Signature.rawdata
 
-Role.id -r* Role
-Role.name --* Role
+Signature.id --* Signature
+Signature.rawdata --* Signature
 
-Person "0,*"-l-"1,1" Role
-Task "0,*"-r-"1,1" Role
+entity Artefact
+entity Artefact.id
+entity Artefact.uniqueName
+entity Artefact.details
+
+Artefact.id --* Artefact
+Artefact.name --* Artefact
+Artefact.details --* Artefact
+
+Signature "0,*"--"1,1" Person
+Group "0,*"--"0,*" Person
+Group "0,*"--"0,*" Privilege
+Privilege "0,*"--"1,1" Task
+Task "1,1"--"0,*" Signature
 Task "0,*"-d-"1,1" Person
+Task "0,*"-d-"0,*" Artefact
+
 
 right footer
 НТУУ КПІ ім.І.Сікорського
