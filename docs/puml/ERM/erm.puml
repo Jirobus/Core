@@ -1,6 +1,6 @@
-@startuml BEM
+@startuml ERM
 title
-<font size=16 color=black>BE-модель
+<font size=16 color=black>ER-модель
 end title
 
 entity Person {
