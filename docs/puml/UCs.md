@@ -1,0 +1,7 @@
+![main](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Jirobus/Core/master/docs/puml/main.puml)
+![editProjectUC](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Jirobus/Core/master/docs/puml/editProjectUC.puml)
+![runProjectUC](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Jirobus/Core/master/docs/puml/runProjectUC.puml)
+![getTaskUC](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Jirobus/Core/master/docs/puml/getTaskUC.puml)
+![resolveTaskUC](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Jirobus/Core/master/docs/puml/resolveTaskUC.puml)
+![handleResultUC](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Jirobus/Core/master/docs/puml/handleResultUC.puml)
+![handleErrorsUC](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/Jirobus/Core/master/docs/puml/handleErrorsUC.puml)
