@@ -1,7 +1,16 @@
-@startuml runProjectUC
-
+@startuml runProject
 left header
-<font size=16 color=black><b>Запуск проекту:</b> 
+<font color=000 size=18><b>Package:</b> UCD_1
+
+<font color=000 size=16><b>ID:</b> UC_2
+<font color=000 size=16><b>Назва:</b> Запуск проекту
+<font color=000 size=16><b>Учасники:</b> Менеджер, Система
+<font color=000 size=16><b>Передумови:</b> Проект не ініціалізовано
+<font color=000 size=16><b>Результат:</b> Генерація завдань та їх збереження в бд
+<font color=000 size=16><b>Виключні ситуації:</b> Відсутні
+
+<font color=000 size=16><b>Основний сценарій:</b> 
+
 end header
 
 |Менеджер|
