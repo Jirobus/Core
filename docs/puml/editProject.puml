@@ -1,4 +1,4 @@
-@startuml editProjectUC
+@startuml createProjectUC
 
 left header
 <font size=16 color=black><b>Редагування проекту:</b> 
