@@ -1,7 +1,16 @@
-@startuml handleResultUC
-
+@startuml
 left header
-<font size=16 color=black><b>Перевірка виконання:</b> 
+<font color=000 size=18><b>Package:</b> UCD_1
+
+<font color=000 size=16><b>ID:</b> UC_6
+<font color=000 size=16><b>Назва:</b> Виконання задачі
+<font color=000 size=16><b>Учасники:</b> Менеджер проекту, Система
+<font color=000 size=16><b>Передумови:</b> Виконання задачі
+<font color=000 size=16><b>Результат:</b> Перевірка виконання пройдена
+<font color=000 size=16><b>Виключні ситуації:</b> Відсутні
+
+<font color=000 size=16><b>Основний сценарій:</b> 
+
 end header
 
 |Система|
@@ -12,7 +21,7 @@ start
 :Підтверджує отримання;
 :Перевіряє якість виконання;
 :Передає дані про якість
-виконанання в систему;
+виконання в систему;
 note right #aaffaa
 <font color=red><b>Може ініціювати
 <font color=red><b>ситуацію "Обробка помилок"
