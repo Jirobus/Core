@@ -1,13 +1,13 @@
-@startuml
+@startuml handleResult
 left header
 <font color=000 size=18><b>Package:</b> UCD_1
 
-<font color=000 size=16><b>ID:</b> UC_6
+<font color=000 size=16><b>ID:</b> UC_5
 <font color=000 size=16><b>Назва:</b> Виконання задачі
 <font color=000 size=16><b>Учасники:</b> Менеджер проекту, Система
 <font color=000 size=16><b>Передумови:</b> Виконання задачі
 <font color=000 size=16><b>Результат:</b> Перевірка виконання пройдена
-<font color=000 size=16><b>Виключні ситуації:</b> Відсутні
+<font color=000 size=16><b>Виключні ситуації:</b> EX_1 Обробка помилок
 
 <font color=000 size=16><b>Основний сценарій:</b> 
 
@@ -23,7 +23,7 @@ start
 :Передає дані про якість
 виконання в систему;
 note right #aaffaa
-<font color=red><b>Може ініціювати
+<font color=red><b>Може ініціювати EX_1
 <font color=red><b>ситуацію "Обробка помилок"
 end note
 
