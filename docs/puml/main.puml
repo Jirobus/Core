@@ -1,5 +1,8 @@
-@startuml mainUCD
+@startuml
+right header
+<font size=24 color=black>Package: <b>UCD_1.1
 
+end header
 title
 <font size=16 color=black>Система керування проектами сталої якості
 <font size=14 color=black>Основні процеси
@@ -9,12 +12,12 @@ actor "Робітник" as Worker
 actor "Менеджер" as Manager
 actor "Тестувальник" as QA
 
-usecase "Редагування плану проекту" as editProjectUC
-usecase "Запуск проекту" as runProjectUC
-usecase "Отримання задачі" as getTaskUC
-usecase "Передача результату" as resolveTaskUC
-usecase "Перевірка виконання" as handleResultUC
-usecase "Обробка помилок" as handleErrorsUC
+usecase "<b>UC_1</b>\n"Редагування плану проекту" as editProjectUC
+usecase "<b>UC_2</b>\n"Запуск проекту" as runProjectUC
+usecase "<b>UC_3</b>\n"Отримання задачі" as getTaskUC
+usecase "<b>UC_4</b>\n"Передача результату" as resolveTaskUC
+usecase "<b>UC_5</b>\n"Перевірка виконання" as handleResultUC
+usecase "<b>UC_6</b>\n"Обробка помилок" as handleErrorsUC
 
 Manager -d-> editProjectUC
 Manager -u-> runProjectUC
