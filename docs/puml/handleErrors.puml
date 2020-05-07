@@ -2,13 +2,12 @@
 left header
 <font color=000 size=18><b>Package:</b> UCD_1
 
-<font color=000 size=16><b>ID:</b> UC_7
+<font color=000 size=16><b>ID:</b> UC_6
 <font color=000 size=16><b>Назва:</b> Обробка помилок
 <font color=000 size=16><b>Учасники:</b> Тестувальник, Система, Менеджер
 <font color=000 size=16><b>Передумови:</b> Приходять помилки
 <font color=000 size=16><b>Результат:</b> Помилки виправлено
-<font color=000 size=16><b>Виключні ситуації:</b> Відсутні
-
+<font color=000 size=16><b>Виключні ситуації:</b> EX_2 Інший сценарій вирішення
 <font color=000 size=16><b>Основний сценарій:</b> 
 
 end header
@@ -17,7 +16,7 @@ end header
 start
 :Ініціює процедуру;
 note right #aaffaa
-Може додати свій сценарій її вирішення
+EX_2 Може додати свій сценарій її вирішення
 end note
 
 |Система|
