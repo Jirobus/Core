@@ -48,8 +48,15 @@ entity Artefact.uniqueName
 entity Artefact.details
 
 Artefact.id --* Artefact
-Artefact.name --* Artefact
+Artefact.uniqueName --* Artefact
 Artefact.details --* Artefact
+
+entity Project
+entity Project.id
+entity Project.name
+
+Project.id --* Project
+Project.name --* Project
 
 Signature "0,*"--"1,1" Person
 Group "0,*"--"0,*" Person
@@ -58,7 +65,8 @@ Privilege "0,*"--"1,1" Task
 Task "1,1"--"0,*" Signature
 Task "0,*"-d-"1,1" Person
 Task "0,*"-d-"0,*" Artefact
-
+Project "1,1"--"0,*" Task
+Project "1,1"--"0,*" Artefact
 
 right footer
 НТУУ КПІ ім.І.Сікорського
