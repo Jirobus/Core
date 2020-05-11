@@ -10,14 +10,9 @@ entity Person {
     qualities
 }
 
-entity Group {
+entity Role {
     id
     name
-}
-
-entity Privilege {
-    id
-    type
 }
 
 entity Task {
@@ -26,7 +21,6 @@ entity Task {
 }
 
 entity Signature {
-    id
     rawdata
 }
 
@@ -36,20 +30,31 @@ entity Artefact {
     details
 }
 
+entity ArtefactRole {
+    id
+    type
+}
+
 entity Project {
     id
     name
 }
 
+Signature "0,*"--"1,1" Task
 Signature "0,*"--"1,1" Person
-Group "0,*"--"0,*" Person
-Group "0,*"--"0,*" Privilege
-Privilege "0,*"--"1,1" Task
-Task "1,1"--"0,*" Signature
-Task "0,*"-d-"1,1" Person
-Task "0,*"-d-"0,*" Artefact
-Project "1,1"--"0,*" Task
-Project "1,1"--"0,*" Artefact
+Signature "0,*"--"1,1" Role
+
+Role "0,*"--"1,1" Project
+
+RoleLink "0,*"--"1,1" Role
+RoleLink "0,*"--"1,1" Person
+
+Task "0,*"--"1,1" Person
+Task "0,*"--"1,1" Project
+
+ArtefactLink "0,*"--"1,1" Artefact
+ArtefactLink "0,*"--"1,1" Task
+ArtefactLink "0,*"--"1,1" ArtefactRole
 
 right footer
 НТУУ КПІ ім.І.Сікорського
